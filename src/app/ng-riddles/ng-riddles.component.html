@@ -1,0 +1,20 @@
+<div *ngIf="riddle1.ansIsCorrect == 'false'">
+  <div class='text-center' *ngIf="riddle1.bcIsCorrect == 'false';">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">START CODE (XXX)</span>
+        </div>
+        <input #riddle1Code (focusout)='riddle1CodeCheck(riddle1Code.value)' type="text" class="form-control">
+      </div>
+      <button class='btn btn-primary' style="width: 100%; margin-top: 20px;">Enter Code</button>
+  </div>
+  <div *ngIf="riddle1.bcIsCorrect == 'true';">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">{{riddle1.riddle}}</span>
+        </div>
+        <input #riddle1Ans (focusout)='riddle1AnsCheck(riddle1Ans.value)' type="text" class="form-control">
+      </div>
+      <button class='btn btn-warning' style="width: 100%; margin-top: 20px;">Submit Answer</button>
+  </div>
+</div>

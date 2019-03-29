@@ -1,21 +1,36 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img alt="Demonic Logo" class='img-fluid' src="https://i.imgur.com/MUYvomb.jpg">
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div *ngIf="gameBegin == 'false';" class='jumbotron' style='background-color: rgb(255, 242, 242)'>
+  <div class='display-4'>Please Read:</div>
+  <div class='col-lg-8' style='text-align: center;'>
+    <p class='lead' style='font-size: 22px;'>
+      Welcome to our first Demonic Scavenger Hunt with our new web-app! We hope all goes well and no technical 
+      problems occur but if they do, contact <br/> (619) 219-1230. 
+    </p>
+  </div>
+  <hr class='my-2'>
+  <div class='row'>
+    <div class='col-md-2'></div>
+    <div class='col-md-8 text-center'><p> 
+    FOLLOW ALL TRAFFIC LAWS AND PRACTICE SAFE DRIVING SKILLS, WE ARE NOT 
+    LIABLE FOR ANY DAMAGES OR INJURING DURING PARTICIPATION THIS EVENT
+  </p></div>
+    <div class='col-md-2'></div>
+  </div>
+  
+  <hr class='my-2'>
+  
+  <div class="col-md-8 text-center"> 
+      <button type='button' (click)="beginGame()" class='btn btn-danger' style="width: 80%; height: 58px; font-size: 24px;">
+        Join The Hunt</button>
+  </div>
+</div>
+
+
+<div *ngIf="gameBegin == 'true';">
+    <app-ng-riddles>Loading Questions....</app-ng-riddles>
+</div>
 
 <router-outlet></router-outlet>
