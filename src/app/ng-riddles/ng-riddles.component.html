@@ -18,3 +18,7 @@
       <button class='btn btn-warning' style="width: 100%; margin-top: 20px;">Submit Answer</button>
   </div>
 </div>
+<div *ngIf="riddle1.ansIsCorrect == 'true'" class='text-center'>
+  <h2>{{riddle1.nextLocation}}</h2>
+  <button class='btn btn-secondary' style="width: 100%; margin-top: 20px;">NEXT CODE</button>
+</div>

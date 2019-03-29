@@ -12,7 +12,9 @@ export class NgRiddlesComponent implements OnInit {
     bcIsCorrect : "false",
     riddle: "What does 2+2 equal?",
     answer: "4",
-    ansIsCorrect: "false"
+    ansIsCorrect: "false", 
+    nextLocation: "Grossmont",
+    showLoc: 'false'
   };
   riddle2 = 
   {
