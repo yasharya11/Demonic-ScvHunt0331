@@ -18,22 +18,22 @@ export class NgRiddlesComponent implements OnInit {
   };
   riddle2 =
   {
-    beginCode: "YYY",
+    beginCode: "550",
     bcIsCorrect : "false",
     riddle: "How many feet are in a quarter mile?",
     answer: "1320",
     ansIsCorrect: "false",
-    nextLocation: "United Stares Postal Office: 6030 Santo Rd Ste I, San Diego CA 92124",
+    nextLocation: "United States Postal Office: 6030 Santo Rd Ste I, San Diego CA 92124",
     showLoc: 'false'
   };
   riddle3 =
   {
-    beginCode: "ZZZ",
+    beginCode: "469",
     bcIsCorrect : "false",
     riddle: "I have keys but no doors, I have space but no room.. You can \"enter\" but you can't leave. What am I?",
     answer: "a keyboard",
     ansIsCorrect: "false",
-    nextLocation: "Pockets Billiards & Brew: 5610 Kearny Mesa Rd, Unit E, San Diego, CA 92111 [LOOK OUT FOR DIP, TURN LEFT ON MAGNETRON]",
+    nextLocation: "Pockets Billiards & Brew: 5610 Kearny Mesa Rd, Unit E, San Diego, CA 92111 [TURN LEFT ON MAGNETRON]",
     showLoc: 'false'
   };
 
@@ -79,7 +79,7 @@ export class NgRiddlesComponent implements OnInit {
 
   riddle3AnsCheck(ans)
   {
-    if (ans == this.riddle3.answer)
+    if (ans.toLowerCase() == this.riddle3.answer.toLowerCase())
     {
       this.riddle3.ansIsCorrect = 'true';
     }
