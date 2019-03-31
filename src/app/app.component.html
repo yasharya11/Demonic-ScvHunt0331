@@ -1,29 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <img alt="Demonic Logo" class='img-fluid' src="https://i.imgur.com/MUYvomb.jpg">
+  <img alt="Demonic Logo" class='img-fluid' src="https://i.imgur.com/qOtD2QN.png"
+    style="margin-top: 20px; margin-bottom: 5px; -webkit-filter: invert(1); filter: invert(1);">
 </div>
-<div *ngIf="gameBegin == 'false';" class='jumbotron' style='background-color: rgb(255, 242, 242)'>
-  <div class='display-4'>Please Read:</div>
+<div class="row">
+  <div class="col-md-12 text-center"
+    style="color: white;  letter-spacing: 2px; margin-bottom: 16px; font-family:Impact, Charcoal, sans-serif; font-size: 28px;">
+    Scavenger Hunt
+  </div>
+</div>
+<div *ngIf="gameBegin == 'false';" class='jumbotron' style='font-family: Verdana, Geneva, sans-serif; background-color: rgba(223, 223, 223, 0.796)'>
+  <div style='font-size: 26px; margin-bottom: 10px;'>Please Read:</div>
   <div class='col-lg-8' style='text-align: center;'>
-    <p class='lead' style='font-size: 22px;'>
-      Welcome to our first Demonic Scavenger Hunt with our new web-app! We hope all goes well and no technical 
-      problems occur but if they do, contact <br/> (619) 219-1230. 
+    <p class='lead' style='font-size: 18px;'>
+      Welcome to our first Demonic Scavenger Hunt with our new web-app! We hope all goes well and no technical
+      problems occur but if they do, instagram dm <br/> <a href="https://www.instagram.com/demonic_carclub/?hl=en">@demonic_carclub</a>
     </p>
   </div>
   <hr class='my-2'>
   <div class='row'>
     <div class='col-md-2'></div>
-    <div class='col-md-8 text-center'><p> 
-    FOLLOW ALL TRAFFIC LAWS AND PRACTICE SAFE DRIVING SKILLS, WE ARE NOT 
-    LIABLE FOR ANY DAMAGES OR INJURING DURING PARTICIPATION THIS EVENT
-  </p></div>
+    <div class='col-md-8 text-center'>
+      <p style="font-size: 12px; margin-bottom: -0px;">
+        Please follow all traffic laws and practice safe driving skills, we are not liable for any damage or injuries during participation this event
+      </p>
+    </div>
     <div class='col-md-2'></div>
   </div>
-  
+
   <hr class='my-2'>
-  
-  <div class="col-md-8 text-center"> 
-      <button type='button' (click)="beginGame()" class='btn btn-danger' style="width: 80%; height: 58px; font-size: 24px;">
+
+  <div class="col-md-8 text-center">
+      <button onclick="location.href='https://podio.com/webforms/21844736/1525366'" type='button' class='btn btn-primary' style="width: 60%; height: 38px; font-size: 16px; margin-top: 10px; margin-bottom: 10px;">
+        Attendance</button>
+  </div>
+  <hr class='my-2'>
+
+  <div class="col-md-8 text-center">
+      <button type='button' (click)="beginGame()" class='btn btn-danger' style="width: 80%; height: 58px; font-size: 24px; margin-top: 20px;">
         Join The Hunt</button>
   </div>
 </div>

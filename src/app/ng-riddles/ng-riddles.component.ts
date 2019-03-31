@@ -6,31 +6,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-riddles.component.css']
 })
 export class NgRiddlesComponent implements OnInit {
-  riddle1 = 
+  riddle1 =
   {
     beginCode: "XXX",
-    bcIsCorrect : "false",
-    riddle: "What does 2+2 equal?",
-    answer: "4",
-    ansIsCorrect: "false", 
-    nextLocation: "Grossmont",
+    bcIsCorrect : "true",
+    riddle: "How many cylinders are in a V8?",
+    answer: "8",
+    ansIsCorrect: "false",
+    nextLocation: "8800 Grossmont College Dr, El Cajon, CA 92020",
     showLoc: 'false'
   };
-  riddle2 = 
+  riddle2 =
   {
     beginCode: "YYY",
     bcIsCorrect : "false",
-    riddle: "What does 4+4 equal?",
-    answer: "8",
-    ansIsCorrect: "false"
+    riddle: "How many feet are in a quarter mile?",
+    answer: "1320",
+    ansIsCorrect: "false",
+    nextLocation: "United Stares Postal Office: 6030 Santo Rd Ste I, San Diego CA 92124",
+    showLoc: 'false'
   };
-  riddle3 =   
+  riddle3 =
   {
     beginCode: "ZZZ",
     bcIsCorrect : "false",
-    riddle: "What does 6+6 equal?",
-    answer: "12",
-    ansIsCorrect: "false"
+    riddle: "I have keys but no doors, I have space but no room.. You can \"enter\" but you can't leave. What am I?",
+    answer: "a keyboard",
+    ansIsCorrect: "false",
+    nextLocation: "Pockets Billiards & Brew: 5610 Kearny Mesa Rd, Unit E, San Diego, CA 92111 [LOOK OUT FOR DIP, TURN LEFT ON MAGNETRON]",
+    showLoc: 'false'
   };
 
   riddle1CodeCheck(givenCode)
@@ -46,6 +50,38 @@ export class NgRiddlesComponent implements OnInit {
     if (ans == this.riddle1.answer)
     {
       this.riddle1.ansIsCorrect = 'true';
+    }
+  }
+
+  riddle2CodeCheck(givenCode)
+  {
+    if (givenCode == this.riddle2.beginCode)
+    {
+      this.riddle2.bcIsCorrect = 'true';
+    }
+  }
+
+  riddle2AnsCheck(ans)
+  {
+    if (ans == this.riddle2.answer)
+    {
+      this.riddle2.ansIsCorrect = 'true';
+    }
+  }
+
+  riddle3CodeCheck(givenCode)
+  {
+    if (givenCode == this.riddle3.beginCode)
+    {
+      this.riddle3.bcIsCorrect = 'true';
+    }
+  }
+
+  riddle3AnsCheck(ans)
+  {
+    if (ans == this.riddle3.answer)
+    {
+      this.riddle3.ansIsCorrect = 'true';
     }
   }
 
