@@ -6,7 +6,12 @@
         </div>
         <input #riddle1Ans (focusout)='riddle1AnsCheck(riddle1Ans.value)' type="text" class="form-control">
       </div>
-      <button class='btn btn-warning' style="width: 100%; margin-top: 20px;">Submit Answer</button>
+      <button class='btn btn-warning' style="width: 100%; margin-top: 26px;">Submit Answer</button>
+      <div *ngIf="riddle1.ansAttButWrong == 'true'" class="row">
+        <div class="col-md-10 text-center" style="margin-top: 16px;">
+            <div class="badge badge-danger">{{riddle1.hint}}</div>
+        </div>
+      </div>
   </div>
 </div>
 <div *ngIf="riddle1.ansIsCorrect == 'true' && riddle2.bcIsCorrect =='false'" class='text-center'>
@@ -22,7 +27,7 @@
           </div>
           <input #riddle2Code (focusout)='riddle2CodeCheck(riddle2Code.value)' type="text" class="form-control">
         </div>
-        <button class='btn btn-primary' style="width: 100%; margin-top: 20px;">Enter Code</button>
+        <button class='btn btn-primary' style="width: 100%; margin-top: 26px;">Enter Code</button>
     </div>
     <div *ngIf="riddle2.bcIsCorrect == 'true';">
         <div class="input-group">
@@ -31,41 +36,50 @@
           </div>
           <input #riddle2Ans (focusout)='riddle2AnsCheck(riddle2Ans.value)' type="text" class="form-control">
         </div>
-        <button class='btn btn-warning' style="width: 100%; margin-top: 20px;">Submit Answer</button>
+        <button class='btn btn-warning' style="width: 100%; margin-top: 26px;">Submit Answer</button>
+        <div *ngIf="riddle2.ansAttButWrong == 'true'" class="row">
+            <div class="col-md-10 text-center" style="margin-top: 16px;">
+                <div class="badge badge-danger">{{riddle2.hint}}</div>
+            </div>
+          </div>
     </div>
   </div>
   <div *ngIf="riddle2.ansIsCorrect == 'true' && riddle2.bcIsCorrect =='true' && riddle3.bcIsCorrect =='false'" class='text-center'>
     <h2 style="color: white; margin-top: 40px; margin-bottom: 40px;">{{riddle2.nextLocation}}</h2>
   </div>
 
-
-
   <div *ngIf="riddle3.ansIsCorrect == 'false' && riddle2.ansIsCorrect == 'true' && riddle1.ansIsCorrect == 'true'">
-      <div class='text-center' *ngIf="riddle3.bcIsCorrect == 'false';">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">CODE 2: </span>
-            </div>
-            <input #riddle3Code (focusout)='riddle3CodeCheck(riddle3Code.value)' type="text" class="form-control">
-          </div>
-          <button class='btn btn-primary' style="width: 100%; margin-top: 20px;">Enter Code</button>
+    <div class='text-center' *ngIf="riddle3.bcIsCorrect == 'false';">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">CODE 2: </span>
+        </div>
+        <input #riddle3Code (focusout)='riddle3CodeCheck(riddle3Code.value)' type="text" class="form-control">
       </div>
-      <div *ngIf="riddle3.bcIsCorrect == 'true';">
-          <div style="color: gold; font-size: 26px; padding-top: 6px; padding-bottom: 26px;" class="row text-center">
-          <div class="col-md-8">
-            <span>FINAL RIDDLE: {{riddle3.riddle}}</span>
-          </div>
-          </div>
-          <div class="input-group">
-            <input #riddle3Ans (focusout)='riddle3AnsCheck(riddle3Ans.value)' type="text" class="form-control">
-          </div>
-          <button class='btn btn-warning' style="width: 100%; margin-top: 20px;">Submit Answer</button>
+      <button class='btn btn-primary' style="width: 100%; margin-top: 20px;">Enter Code</button>
+    </div>
+    <div *ngIf="riddle3.bcIsCorrect == 'true';">
+      <div style="color: gold; font-size: 26px; padding-top: 6px; padding-bottom: 26px;" class="row text-center">
+      <div class="col-md-8">
+        <span>FINAL RIDDLE: {{riddle3.riddle}}</span>
       </div>
+      </div>
+      <div class="input-group">
+        <input #riddle3Ans (focusout)='riddle3AnsCheck(riddle3Ans.value)' type="text" class="form-control">
+      </div>
+      <button class='btn btn-warning' style="width: 100%; margin-top: 20px;">Submit Answer</button>
+      <div *ngIf="riddle3.ansAttButWrong == 'true'" class="row">
+          <div class="col-md-10 text-center" style="margin-top: 16px;">
+              <div class="badge badge-danger">{{riddle3.hint}}</div>
+          </div>
+        </div>
     </div>
-    <div *ngIf="riddle3.ansIsCorrect == 'true'" class='text-center'>
-      <h2 style="color: white; margin-top: 40px; margin-bottom: 40px;">{{riddle3.nextLocation}}</h2>
-      <img src="http://pixelartmaker.com/art/370cf504dd15b00.png">
-    </div>
+  </div>
+  <div *ngIf="riddle3.ansIsCorrect == 'true'" class='text-center'>
+    <h2 style="color: white; margin-top: 40px; margin-bottom: 40px;">{{riddle3.nextLocation}}</h2>
+    <h3 style="color: gold; margin-top: 40px; margin-bottom: 40px;">[TURN LEFT ON MAGNETRON]</h3>
+    <img src="http://pixelartmaker.com/art/370cf504dd15b00.png">
+  </div>
 
 
   <div *ngIf="riddle3.ansIsCorrect == 'false' && riddle2.ansIsCorrect == 'true' && riddle1.ansIsCorrect == 'true'">
