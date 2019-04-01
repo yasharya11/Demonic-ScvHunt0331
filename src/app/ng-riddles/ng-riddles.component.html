@@ -6,7 +6,7 @@
         </div>
         <input #riddle1Ans (focusout)='riddle1AnsCheck(riddle1Ans.value)' type="text" class="form-control">
       </div>
-      <button class='btn btn-warning' style="width: 100%; margin-top: 26px;">Submit Answer</button>
+      <button (click)="riddle1Ans.value = ''" class='btn btn-warning' style="width: 100%; margin-top: 26px;">Submit Answer</button>
       <div *ngIf="riddle1.ansAttButWrong == 'true'" class="row">
         <div class="col-md-10 text-center" style="margin-top: 16px;">
             <div class="badge badge-danger">{{riddle1.hint}}</div>
@@ -36,7 +36,7 @@
           </div>
           <input #riddle2Ans (focusout)='riddle2AnsCheck(riddle2Ans.value)' type="text" class="form-control">
         </div>
-        <button class='btn btn-warning' style="width: 100%; margin-top: 26px;">Submit Answer</button>
+        <button (click)="riddle2Ans.value = ''" class='btn btn-warning' style="width: 100%; margin-top: 26px;">Submit Answer</button>
         <div *ngIf="riddle2.ansAttButWrong == 'true'" class="row">
             <div class="col-md-10 text-center" style="margin-top: 16px;">
                 <div class="badge badge-danger">{{riddle2.hint}}</div>
@@ -67,7 +67,7 @@
       <div class="input-group">
         <input #riddle3Ans (focusout)='riddle3AnsCheck(riddle3Ans.value)' type="text" class="form-control">
       </div>
-      <button class='btn btn-warning' style="width: 100%; margin-top: 20px;">Submit Answer</button>
+      <button class='btn btn-warning' (click)="riddle3Ans.value = ''" style="width: 100%; margin-top: 20px;">Submit Answer</button>
       <div *ngIf="riddle3.ansAttButWrong == 'true'" class="row">
           <div class="col-md-10 text-center" style="margin-top: 16px;">
               <div class="badge badge-danger">{{riddle3.hint}}</div>
